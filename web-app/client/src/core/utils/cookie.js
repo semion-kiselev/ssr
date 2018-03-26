@@ -1,3 +1,7 @@
+if (typeof document === 'undefined') {
+    global.document = {};
+}
+
 export function setCookie(name, value, options) {
     options = options || {};
 
@@ -34,7 +38,7 @@ export function unsetCookie(name) {
 }
 
 export function getCookie(name) {
-    const matches = document.cookie.match(new RegExp(
+    const matches = document.cookie && document.cookie.match(new RegExp(
         "(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + "=([^;]*)"
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;

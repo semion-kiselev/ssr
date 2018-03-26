@@ -11,6 +11,11 @@ class ArticlesList extends PureComponent {
         }
     }
 
+    // for ssr only
+    static fetchData(store, token) {
+        return store.dispatch(loadArticles(token));
+    }
+
     componentDidMount() {
         if (!this.props.articles.length) {
             this.startLoading();
@@ -65,7 +70,5 @@ export default connect(
     state => ({
         articles: getArticlesSelector(state)
     }),
-    {
-        loadArticles
-    }
+    {loadArticles}
 )(ArticlesList);

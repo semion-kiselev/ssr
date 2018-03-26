@@ -1,3 +1,3 @@
-import request from 'core/utils/request';
+import request from '../../../core/utils/request';
 
-export const login = (data) => request.post('/passport/login', data);
+export const login = (data) => request.post('/api/passport/login', data);

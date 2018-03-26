@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 import {renderRoutes} from 'react-router-config';
-import {hasTokenSelector, logout, setHasToken} from 'modules/auth';
+import {hasTokenSelector, logout, setHasToken} from '../../modules/auth';
 import {tokenKey, tokenHeader} from '../constants';
 import {getCookie} from '../utils/cookie';
 import request from '../utils/request';

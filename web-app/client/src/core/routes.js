@@ -1,7 +1,7 @@
 import AppRoot from './containers/root';
 import Home from './components/home';
-import {ArticlesList} from 'modules/articles';
-import {Login} from 'modules/auth';
+import {ArticlesList} from '../modules/articles';
+import {Login} from '../modules/auth';
 
 const routes = [
     {

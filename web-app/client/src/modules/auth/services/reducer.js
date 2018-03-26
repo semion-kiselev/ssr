@@ -1,7 +1,7 @@
 import {createAction, handleActions} from 'redux-actions';
-import request from 'core/utils/request';
-import {tokenKey, tokenHeader} from 'core/constants';
-import {setCookie, unsetCookie} from 'core/utils/cookie';
+import request from '../../../core/utils/request';
+import {tokenKey, tokenHeader} from '../../../core/constants';
+import {setCookie, unsetCookie} from '../../../core/utils/cookie';
 import * as Api from './api';
 
 const defaultState = {

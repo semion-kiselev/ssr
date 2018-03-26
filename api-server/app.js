@@ -11,8 +11,8 @@ const app = express();
 app.use(express.json());
 app.use(passport.initialize());
 
-app.use('/articles', jwtBarier, articlesRouter);
-app.use('/passport', passportRouter);
+app.use('/api/articles', jwtBarier, articlesRouter);
+app.use('/api/passport', passportRouter);
 
 app.use(notFound);
 app.use(validationErrors);
